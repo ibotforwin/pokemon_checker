@@ -26,7 +26,6 @@ def process_poke_comparison(pokemon1, pokemon2):
             strength_url = point['url']
 
     #Default to false for base stats being equal, which will change if that condition is reached.
-    pokemon_equal = True
     pokemon_same_base = False
     response = requests.request("GET", strength_url)
     data = response.json()
