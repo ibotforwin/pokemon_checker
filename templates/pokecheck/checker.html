@@ -2,16 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Pokemon Checker</title>
+    <meta charset="UTF-8">
+    <meta property="og:locale" content="">
+    <meta property="og:type" content="Checker">
+    <meta property="og:title" content="Check how pokemon stack up against each other!">
+    <meta property="og:description"
+          content="Check how pokemon stack up against each other!">
+    <meta property="og:url" content="/">
+    <meta property="og:site_name" content="">
+    <meta property="og:image" content="static/img/background/pbg2.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/materia/bootstrap.css">
 </head>
 <body>
 <form method="POST">
-
     {% csrf_token %}
-    {{ pokemon_choices }}
-    <div>The winner is: {{ result }}</div>
-
-    <input type="submit" value="Submit">
+    <div class="row justify-content-center jumbatron">
+        <div class="col-lg-6 col-md-6 col-sm-10">
+        {{ pokemon_choices }}
+        <div class="jumbatron h1 success">The winner is: <a href="https://www.pokemon.com/us/pokedex/{{ result }}">{{ result }}</a></div>
+            </div>
+    </div>
+        <div class="row justify-content-center">
+         <input class="btn btn-success" type="submit" value="Submit"></div>
 </form>
 </body>
 </html>
