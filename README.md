@@ -3,7 +3,7 @@ This is a simply Django application which takes two inputs of pokemon names and 
 
 This application uses PokeAPI to get information.
 
-The main application launches on: http://127.0.0.1:8000/pokecheck/check/
+The main application launches on: http://127.0.0.1:8000/pokecheck/check/ (when serving locally)
 
 It takes two inputs of different pokemon.
 
