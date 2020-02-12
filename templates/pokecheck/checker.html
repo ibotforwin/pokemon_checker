@@ -9,7 +9,8 @@
 
     {% csrf_token %}
     {{ pokemon_choices }}
-      {{ result }}
+    <div>The winner is: {{ result }}</div>
+
     <input type="submit" value="Submit">
 </form>
 </body>

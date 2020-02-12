@@ -28,12 +28,12 @@ def process_poke_comparison(pokemon1, pokemon2):
     data = response.json()
     for weakness in data['damage_relations']['double_damage_from']:
         if (weakness['name']) == type_vs:
-            win_battle = True
+            win_battle = False
         else:
             pokemon_equal = True
     for strength in data['damage_relations']['double_damage_to']:
         if (strength['name']) == type_vs:
-            win_battle = False
+            win_battle = True
         else:
             pokemon_equal = True
     if pokemon_equal == True:
@@ -43,6 +43,12 @@ def process_poke_comparison(pokemon1, pokemon2):
             win_battle = False
         if (second_pick[1] == first_pick[1]):
             pokemon_same_base = True
+
+    # Printing for debugging
+    print(pokemon1)
+    print(first_pick)
+    print(pokemon2)
+    print(second_pick)
     if pokemon_same_base == True:
         return pokemon1
     else:
@@ -50,6 +56,3 @@ def process_poke_comparison(pokemon1, pokemon2):
             return pokemon1
         else:
             return pokemon2
-
-
-

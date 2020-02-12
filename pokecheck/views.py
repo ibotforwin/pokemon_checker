@@ -9,8 +9,8 @@ def pokecheck(request):
     if request.method == "POST":
         pokemon_choices = PokemonForm(request.POST)
         if pokemon_choices.is_valid():
-            first_pick = pokemon_choices.cleaned_data['first_pick']
-            second_pick = pokemon_choices.cleaned_data['second_pick']
+            first_pick = pokemon_choices.cleaned_data['first_pick'].lower()
+            second_pick = pokemon_choices.cleaned_data['second_pick'].lower()
             result = call_pokeapi.process_poke_comparison(first_pick, second_pick)
         else:
             result = 'Invalid Input'
