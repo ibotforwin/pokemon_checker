@@ -1,5 +1,5 @@
 # pokemon_checker
-This is a simply Django application which takes two inputs of pokemon names and checks their stats against each other.
+This is a simple Django application which takes two inputs of pokemon names and checks their stats against each other.
 
 This application uses PokeAPI to get information.
 
